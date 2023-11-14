@@ -1,0 +1,50 @@
+任务一：
+git checkout -b feature-newFunc
+（操作文件）
+git add mydiary/diary.txt
+git commit -m "Added diary entry for feature work"
+（操作文件）
+git add mydiary/diary.txt
+git commit -m "Added another diary entry for feature work"
+git checkout main
+git merge feature-newFunc
+git push origin main
+
+任务二：
+git checkout experiment
+git log
+git checkout main
+git cherry-pick d58314c014e17c0f8091e4f715836e14815e443d
+git push origin main
+
+任务三：
+git checkout dev
+git log
+git revert f9ae8ba11305d96bb9db322e3488c754f176ede0
+（手动解决冲突）
+git add backend/project.txt
+git revert --continue
+git push origin dev
+
+任务四：
+git checkout main
+（操作文件）
+git add frontend/styles.css
+git commit -m "Change font in styles.css"
+git checkout feature-upload
+git diff main
+git checkout main
+git merge feature-upload
+（手动解决冲突）
+git add frontend/styles.css
+git commit -m "fix conflict"
+git merge feature-upload
+git push origin main
+
+任务五：
+git checkout documentation --
+git rebase -i HEAD~4
+（重组与重排）
+git checkout main
+git merge documentation
+git push origin main
